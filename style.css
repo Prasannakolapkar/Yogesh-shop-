@@ -1,0 +1,214 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f9f9ff, #e6f0ff);
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #0066ff, #00ccff);
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  position: relative;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  font-family: "Montserrat";
+  font-size: 3rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffeb3b;
+}
+
+/* Section Base Style */
+section {
+  padding: 70px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Section Titles */
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #004aad;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #00bcd4;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* About Section */
+#about {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  padding: 50px;
+}
+
+/* What We Sell */
+#products {
+  background: linear-gradient(135deg, #f3faff, #e8f5e9);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.product-item {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Location Section */
+#location {
+  background: linear-gradient(135deg, #fff0f5, #f3e5f5);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 15px;
+  border: none;
+}
+
+/* Contact Section */
+#contact {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input, form textarea {
+  width: 80%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form button {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #0066ff, #00ccff);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+/* Decorative Graphics */
+body::before, body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+body::before {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, #00c6ff33, transparent);
+  top: 50px;
+  left: 50px;
+}
+
+body::after {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle at center, #ff80ab33, transparent);
+  bottom: 100px;
+  right: 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .product-list {
+    flex-direction: column;
+  }
+}
